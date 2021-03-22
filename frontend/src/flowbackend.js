@@ -110,7 +110,8 @@ function FlowBackEnd() {
       <div
         className=""
         onClick={() => {
-          setShow(true);
+          setShow(true);setInputValue('')
+
         }}
       >
         <QueryRenderer
@@ -167,7 +168,8 @@ function FlowBackEnd() {
               class="btn btn-success btn-block"
               disabled={!inputValue}
               onClick={() => {
-                setShow(false);
+                setShow(false);setInputValue('');
+
                 mutate({
                   variables: {
                     input: {

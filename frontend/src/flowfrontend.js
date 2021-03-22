@@ -107,6 +107,7 @@ function FlowFrontEnd() {
         className=""
         onClick={() => {
           setShow(true);
+          setInputValue('');
         }}
       >
         <QueryRenderer
@@ -125,7 +126,9 @@ function FlowFrontEnd() {
 
       <Modal
         show={show}
-        onHide={() => setShow(false)}
+        onHide={() => { setShow(false); setInputValue('')} 
+            
+        }
         dialogClassName="modal-90w"
         aria-labelledby="example-custom-modal-styling-title"
       >
@@ -155,12 +158,13 @@ function FlowFrontEnd() {
               disabled={!inputValue}
               onClick={() => {
                 setShow(false);
+                setInputValue('');
                 mutate({
                   variables: {
                     input: {
                       skillName: `${inputValue}`,
                       areaId: 1,
-                    },
+                    }, 
                   },
                   OnCompleted(data) {
                     List();
