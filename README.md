@@ -6,16 +6,11 @@ The goal of this exercise is to implement a simple application using the followi
  - Flow
  - Relay
 
-## TODO:
+## SETUP:
 
-- User should see two lists of skills for knowledge areas (front-end and back-end) after navigation to the application.
-- User should be able to add a new skill to the knowledge area with such flow:
-  Click on the list -> add skill name in the modal dialog
-
-## Mockup:
-
-![](./mock.png)
+- npm i (on backend and frontend)
+- npm run start (on backend and frontend)
 
 # Local Server
 
-You can find the GQL server to interact in `./backend` dir.
+http://localhost:3000
